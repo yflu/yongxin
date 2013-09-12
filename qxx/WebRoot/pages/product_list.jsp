@@ -66,7 +66,9 @@
                         <!-- Portfolio item [begin] -->
                         <c:choose>
                             <c:when test="${fn:length(productList)==0}">
-                                <div style="font-family: '微软雅黑'">暂无产品</div>
+                                <div class="portf_item grid_4">
+                                    <img src="<%=request.getContextPath()%>/images/no_result.png" width="400"/>
+                                </div>
                             </c:when><c:otherwise>
                             <c:forEach var="product" items="${productList}">
                                 <div class="portf_item grid_4">

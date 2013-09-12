@@ -78,7 +78,7 @@
     <!-- Post slider -->
     <c:choose>
         <c:when test="${fn:length(product.medias)==0}">
-            <img src="<%=request.getContextPath()%>/images/nopic.jpg"/>
+            <img src="<%=request.getContextPath()%>/images/nopic_0.png"/>
         </c:when><c:otherwise>
         <div id="blogSlider1" class="post_slider flexslider">
             <ul class="slides">
