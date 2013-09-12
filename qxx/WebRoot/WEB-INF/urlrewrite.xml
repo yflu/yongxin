@@ -7,6 +7,12 @@
     </rule>
 
     <rule>
+        <note>index</note>
+        <from>^/index(/)?$</from>
+        <to>/index.do</to>
+    </rule>
+
+    <rule>
         <note>productlist</note>
         <from>^/product/list(/c([^/\s]*))?(/k([^/\s]*))?(/p(\d*))?(/)?$</from>
         <to>%{context-path}/product/list.do?c=$2&amp;k=$4&amp;p=$6</to>
@@ -23,13 +29,6 @@
         <from>^/checkcode/([^/\s]*)?(/)?$</from>
         <to>%{context-path}/checkcode.do?verify=$1</to>
     </rule>
-    <!-- <rule>
-            <note>search</note>
-            <from>^/search(/k([^/\s]*))?(/c([^/\s]*))?(/t([^/\s]*))?(/o(\d*))?(/r([^/\s]*))?(/y(\d*))?(/p(\d*))?$</from>
-            <to>%{context-path}/search-search.do?keyword=$2&amp;cityid=$4&amp;cateid=$6&amp;orderType=$8&amp;regionCode=$10&amp;coupon=$12&amp;pageindex=$14</to>
-        </rule>
-    -->
-
 
     <outbound-rule>
         <note>

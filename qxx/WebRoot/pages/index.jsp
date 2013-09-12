@@ -1,3 +1,4 @@
+<%@ page import="com.eric.util.SysConstant" %>
 <%--
   Created by IntelliJ IDEA.
   User: Eric
@@ -6,6 +7,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -129,74 +131,6 @@
 <!-- ============= / SERVICES[end] -->
 
 
-<!-- ============= / PORTFOLIO[begin] -->
-<div class="home_portfolio">
-    <div class="grid_3 hp_item_grid">
-        <h1 class="home_module_title">Recent products</h1>
-
-        <p>Individuationis quae dicens hoc ambulare manu impetum ideo dilectio incompletum Apollonius. Pedes rex in
-            lucem exempli paupers coniunx.</p>
-        <span class="home_more_link"><a href="#">View all our products &rarr;</a></span>
-    </div>
-    <div class="grid_3 hp_item_grid">
-        <a class="lightbox" href="<%=request.getContextPath()%>/images/assets/800x600.jpg">
-            <span class="image_wrap">
-                   <span class="img_wrap_in">
-                        <div class="">
-                            <img alt="" src="<%=request.getContextPath()%>/images/assets/300/1.jpg"
-                                 style="display: block; visibility: visible; opacity: 1;">
-                        </div>
-                    <span class="img_caption_zoom"></span>
-                   </span>
-            </span>
-        </a>
-
-        <%--<div class="hp_grid_img">
-            <a href="#">
-								<span class="image_wrap"><span class="img_wrap_in">
-									<img src="<%=request.getContextPath()%>/images/assets/300/1.jpg" alt=""/>
-								</span></span>
-            </a>
-        </div>--%>
-        <div class="hp_item_meta">
-            <h2><a href="#">Apollonii appropinquat tation </a></h2>
-
-            <p>Posted in <a href="#">Web design</a></p>
-        </div>
-    </div>
-    <div class="grid_3 hp_item_grid">
-        <div class="hp_grid_img">
-            <a href="#">
-								<span class="image_wrap"><span class="img_wrap_in">
-									<img src="<%=request.getContextPath()%>/images/assets/300/2.jpg" alt=""/>
-								</span></span>
-            </a>
-        </div>
-        <div class="hp_item_meta">
-            <h2><a href="#">Cyrenensi reversus ait</a></h2>
-
-            <p>Posted in <a href="#">Wordpress Integration</a></p>
-        </div>
-    </div>
-    <div class="grid_3 hp_item_grid">
-        <div class="hp_grid_img">
-            <a href="#">
-								<span class="image_wrap"><span class="img_wrap_in">
-									<img src="<%=request.getContextPath()%>/images/assets/300/3.jpg" alt=""/>
-								</span></span>
-            </a>
-        </div>
-        <div class="hp_item_meta">
-            <h2><a href="#">Quicumque iactavit texas</a></h2>
-
-            <p>Posted in <a href="#">Logo Design</a>, <a href="#">Web Design</a></p>
-        </div>
-    </div>
-</div>
-<!-- ============= / PORTFOLIO[end] -->
-
-<div class="clear"></div>
-
 <!-- ============= / hot[begin] -->
 <div class="home_blog">
     <div class="grid_3 hp_item_grid">
@@ -204,64 +138,39 @@
 
         <p>Individuationis quae dicens hoc ambulare manu impetum ideo dilectio incompletum Apollonius. Pedes rex in
             lucem exempli paupers coniunx.</p>
-        <span class="home_more_link"><a href="#">View all our products &rarr;</a></span>
+        <span class="home_more_link"><a href="<%=request.getContextPath()%>/product/list">View all our products &rarr;</a></span>
     </div>
-    <div class="grid_3 hp_item_grid clearfix">
-        <a class="lightbox" href="<%=request.getContextPath()%>/images/assets/800x600.jpg">
+    <c:forEach var="hot" items="${hots}" varStatus="status">
+        <c:if test="${status.index>0&&status.index%3==0}">
+            <div class="grid_3 hp_item_grid">
+                <h1 class="home_module_title"></h1>
+
+                <p></p>
+                <span class="home_more_link"><a href="#"></a></span>
+            </div>
+        </c:if>
+        <div class="grid_3 hp_item_grid clearfix">
+            <a class="lightbox" href="<%=SysConstant.IMAGE_URL%>${hot.logo}_600">
             <span class="image_wrap">
                    <span class="img_wrap_in">
                         <div class="">
-                            <img alt="" src="<%=request.getContextPath()%>/images/assets/300/1.jpg"
+                            <img alt="${hot.name}" src="<%=SysConstant.IMAGE_URL%>${hot.logo}_300"
                                  style="display: block; visibility: visible; opacity: 1;">
                         </div>
                     <span class="img_caption_zoom"></span>
                    </span>
             </span>
-        </a>
-
-        <div class="hp_item_meta">
-            <h2><a href="#">Volo lenone contingere </a></h2>
-            <span class="hb_meta">Posted in <a href="#">Web design</a></span>
-
-            <p>Crescente mihi servitute coniunx in lucem concitaverunt genero in deinde cepit roseo ruens sed esse more
-                fuerit quis casus...</p>
-        </div>
-        <div class="clear"></div>
-    </div>
-    <div class="grid_3 hp_item_grid clearfix">
-        <div class="hp_grid_img">
-            <a href="#">
-								<span class="image_wrap"><span class="img_wrap_in">
-									<img src="<%=request.getContextPath()%>/images/assets/300/5.jpg" alt=""/>
-								</span></span>
             </a>
-        </div>
-        <div class="hp_item_meta">
-            <h2><a href="#">Acceptis ducentos sanctae</a></h2>
-            <span class="hb_meta">Posted in <a href="#">Wordpress Tutorials</a></span>
 
-            <p>Signa in deinde vero rex ut libertatem deum roseo. Tharsia adulescens longum deposita regibus
-                exercitation ulli pelagique...</p>
-        </div>
-        <div class="clear"></div>
-    </div>
-    <div class="grid_3 hp_item_grid clearfix">
-        <div class="hp_grid_img">
-            <a href="#">
-								<span class="image_wrap"><span class="img_wrap_in">
-									<img src="<%=request.getContextPath()%>/images/assets/300/6.jpg" alt=""/>
-								</span></span>
-            </a>
-        </div>
-        <div class="hp_item_meta">
-            <h2><a href="#">Cum obiectum est Apollonius</a></h2>
-            <span class="hb_meta">Posted in <a href="#">World news</a>, <a href="#">Crazy news</a></span>
+            <div class="hp_item_meta">
+                <h2><a href="<%=request.getContextPath()%>/product/info/${hot.id}">${hot.name} </a></h2>
+                <span class="hb_meta">Posted by <a href="#">JOY</a></span>
 
-            <p>Concordi fabricata ait mea ego. Iuvenem discessum adulta quid populi adclamationibus hanc nec benedictus
-                ad per accipere...</p>
+                <p>${hot.intro} </p>
+            </div>
+            <div class="clear"></div>
         </div>
-        <div class="clear"></div>
-    </div>
+    </c:forEach>
 </div>
 <!-- ============= / hot[end] -->
 
@@ -274,123 +183,39 @@
 
         <p>Individuationis quae dicens hoc ambulare manu impetum ideo dilectio incompletum Apollonius. Pedes rex in
             lucem exempli paupers coniunx.</p>
-        <span class="home_more_link"><a href="#">View all our products &rarr;</a></span>
+        <span class="home_more_link"><a href="<%=request.getContextPath()%>/product/list">View all our products &rarr;</a></span>
     </div>
-    <div class="grid_3 hp_item_grid clearfix">
-        <a class="lightbox" href="<%=request.getContextPath()%>/images/assets/800x600.jpg">
+    <c:forEach var="rec" items="${recs}" varStatus="status">
+        <c:if test="${status.index>0&&status.index%3==0}">
+            <div class="grid_3 hp_item_grid">
+                <h1 class="home_module_title"></h1>
+
+                <p></p>
+                <span class="home_more_link"><a href="#"></a></span>
+            </div>
+        </c:if>
+        <div class="grid_3 hp_item_grid clearfix">
+            <a class="lightbox" href="<%=SysConstant.IMAGE_URL%>${rec.logo}_600">
             <span class="image_wrap">
                    <span class="img_wrap_in">
                         <div class="">
-                            <img alt="" src="<%=request.getContextPath()%>/images/assets/300/1.jpg"
+                            <img alt="${rec.name}" src="<%=SysConstant.IMAGE_URL%>${rec.logo}_300"
                                  style="display: block; visibility: visible; opacity: 1;">
                         </div>
                     <span class="img_caption_zoom"></span>
                    </span>
             </span>
-        </a>
-
-        <div class="hp_item_meta">
-            <h2><a href="#">Volo lenone contingere </a></h2>
-            <span class="hb_meta">Posted in <a href="#">Web design</a></span>
-
-            <p>Crescente mihi servitute coniunx in lucem concitaverunt genero in deinde cepit roseo ruens sed esse more
-                fuerit quis casus...</p>
-        </div>
-        <div class="clear"></div>
-    </div>
-    <div class="grid_3 hp_item_grid clearfix">
-        <div class="hp_grid_img">
-            <a href="#">
-								<span class="image_wrap"><span class="img_wrap_in">
-									<img src="<%=request.getContextPath()%>/images/assets/300/5.jpg" alt=""/>
-								</span></span>
             </a>
-        </div>
-        <div class="hp_item_meta">
-            <h2><a href="#">Acceptis ducentos sanctae</a></h2>
-            <span class="hb_meta">Posted in <a href="#">Wordpress Tutorials</a></span>
 
-            <p>Signa in deinde vero rex ut libertatem deum roseo. Tharsia adulescens longum deposita regibus
-                exercitation ulli pelagique...</p>
-        </div>
-        <div class="clear"></div>
-    </div>
-    <div class="grid_3 hp_item_grid clearfix">
-        <div class="hp_grid_img">
-            <a href="#">
-								<span class="image_wrap"><span class="img_wrap_in">
-									<img src="<%=request.getContextPath()%>/images/assets/300/6.jpg" alt=""/>
-								</span></span>
-            </a>
-        </div>
-        <div class="hp_item_meta">
-            <h2><a href="#">Cum obiectum est Apollonius</a></h2>
-            <span class="hb_meta">Posted in <a href="#">World news</a>, <a href="#">Crazy news</a></span>
+            <div class="hp_item_meta">
+                <h2><a href="<%=request.getContextPath()%>/product/info/${rec.id}">${rec.name} </a></h2>
+                <span class="hb_meta">Posted by <a href="#">JOY</a></span>
 
-            <p>Concordi fabricata ait mea ego. Iuvenem discessum adulta quid populi adclamationibus hanc nec benedictus
-                ad per accipere...</p>
+                <p>${rec.intro} </p>
+            </div>
+            <div class="clear"></div>
         </div>
-        <div class="clear"></div>
-    </div>
-
-
-    <div class="grid_3 hp_item_grid">
-        <h1 class="home_module_title"></h1>
-
-        <p></p>
-        <span class="home_more_link"><a href="#"></a></span>
-    </div>
-    <div class="grid_3 hp_item_grid clearfix">
-        <div class="hp_grid_img">
-            <a href="#">
-								<span class="image_wrap"><span class="img_wrap_in">
-									<img src="<%=request.getContextPath()%>/images/assets/300/4.jpg" alt=""/>
-								</span></span>
-            </a>
-        </div>
-        <div class="hp_item_meta">
-            <h2><a href="#">Volo lenone contingere </a></h2>
-            <span class="hb_meta">Posted in <a href="#">Web design</a></span>
-
-            <p>Crescente mihi servitute coniunx in lucem concitaverunt genero in deinde cepit roseo ruens sed esse more
-                fuerit quis casus...</p>
-        </div>
-        <div class="clear"></div>
-    </div>
-    <div class="grid_3 hp_item_grid clearfix">
-        <div class="hp_grid_img">
-            <a href="#">
-								<span class="image_wrap"><span class="img_wrap_in">
-									<img src="<%=request.getContextPath()%>/images/assets/300/5.jpg" alt=""/>
-								</span></span>
-            </a>
-        </div>
-        <div class="hp_item_meta">
-            <h2><a href="#">Acceptis ducentos sanctae</a></h2>
-            <span class="hb_meta">Posted in <a href="#">Wordpress Tutorials</a></span>
-
-            <p>Signa in deinde vero rex ut libertatem deum roseo. Tharsia adulescens longum deposita regibus
-                exercitation ulli pelagique...</p>
-        </div>
-        <div class="clear"></div>
-    </div>
-    <div class="grid_3 hp_item_grid clearfix">
-        <div class="hp_grid_img">
-            <a href="#">
-								<span class="image_wrap"><span class="img_wrap_in">
-									<img src="<%=request.getContextPath()%>/images/assets/300/6.jpg" alt=""/>
-								</span></span>
-            </a>
-        </div>
-        <div class="hp_item_meta">
-            <h2><a href="#">Cum obiectum est Apollonius</a></h2>
-            <span class="hb_meta">Posted in <a href="#">World news</a>, <a href="#">Crazy news</a></span>
-
-            <p>Concordi fabricata ait mea ego. Iuvenem discessum adulta quid populi adclamationibus hanc nec benedictus
-                ad per accipere...</p>
-        </div>
-        <div class="clear"></div>
-    </div>
+    </c:forEach>
 </div>
 <!-- ============= / Recommend[end] -->
 
