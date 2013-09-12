@@ -1,0 +1,69 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="qxx">
+    <output-path>$PROJECT_DIR$/classes/artifacts/qxx</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="qxx" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/lib/antlr-2.7.7.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/aopalliance-1.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/asm-3.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/asm-commons-3.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/asm-util-2.2.3.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/aspectjrt.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/aspectjweaver.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/c3p0-0.9.1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/cglib-2.2.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/cglib-nodep-2.2.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/commons-logging-1.1.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/dom4j-1.6.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/gson-1.7.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/hibernate-commons-annotations-4.0.1.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/hibernate-core-4.2.1.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/hibernate-entitymanager-4.2.1.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/hibernate-jpa-2.0-api-1.0.1.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/hibernate-validator-4.2.0.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jackson-all-1.9.11.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/javassist-3.15.0-GA.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jboss-logging-3.1.0.GA.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jboss-transaction-api_1.1_spec-1.0.1.Final.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/jstl-1.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/mysql-connector-java-5.1.13-bin.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/slf4j-api-1.6.1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/standard.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/validation-api-1.0.0.GA.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/commons-fileupload-1.2.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/kaptcha-2.3.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-aop-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-aspects-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-beans-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-context-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-context-support-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-core-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-expression-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-instrument-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-instrument-tomcat-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-jdbc-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-jms-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-orm-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-oxm-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-test-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-tx-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-web-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-webmvc-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-webmvc-portlet-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/spring-websocket-4.0.0.M1.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/urlrewrite-3.2.0.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/log4j-1.2.9.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/mail.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/log4j-1.2.17.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/quartz-all-2.0.2.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/lib/quartz-all-1.6.6.jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="qxx/web/Web" />
+    </root>
+  </artifact>
+</component>

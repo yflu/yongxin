@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+    <bean id="initJob" class="com.eric.action.SystemDataAction"/>
+    <bean id="initJobTask"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <!-- 调用的Job类 -->
+        <property name="targetObject">
+            <ref bean="initJob"/>
+        </property>
+        <!-- 调用的类中的方法 -->
+        <property name="targetMethod">
+            <value>init</value>
+        </property>
+        <property name="concurrent">
+            <value>false</value>
+        </property>
+    </bean>
+    <bean id="initJobTrigger" class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail">
+            <ref bean="initJobTask"/>
+        </property>
+        <property name="startDelay" value="2000"/>
+        <property name="repeatInterval">
+            <value>1800000</value>
+        </property>
+    </bean>
+</beans>

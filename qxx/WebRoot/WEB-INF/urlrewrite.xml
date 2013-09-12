@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlrewrite>
+    <rule>
+        <note>index</note>
+        <from>^/$</from>
+        <to>/index.do</to>
+    </rule>
+
+    <rule>
+        <note>productlist</note>
+        <from>^/product/list(/c([^/\s]*))?(/k([^/\s]*))?(/p(\d*))?(/)?$</from>
+        <to>%{context-path}/product/list.do?c=$2&amp;k=$4&amp;p=$6</to>
+    </rule>
+
+    <rule>
+        <note>productinfo</note>
+        <from>^/product/info(/([^/\s]*))?(/)?$</from>
+        <to>%{context-path}/product/info.do?id=$2</to>
+    </rule>
+
+    <rule>
+        <note>checkcode</note>
+        <from>^/checkcode/([^/\s]*)?(/)?$</from>
+        <to>%{context-path}/checkcode.do?verify=$1</to>
+    </rule>
+    <!-- <rule>
+            <note>search</note>
+            <from>^/search(/k([^/\s]*))?(/c([^/\s]*))?(/t([^/\s]*))?(/o(\d*))?(/r([^/\s]*))?(/y(\d*))?(/p(\d*))?$</from>
+            <to>%{context-path}/search-search.do?keyword=$2&amp;cityid=$4&amp;cateid=$6&amp;orderType=$8&amp;regionCode=$10&amp;coupon=$12&amp;pageindex=$14</to>
+        </rule>
+    -->
+
+
+    <outbound-rule>
+        <note>
+            The outbound-rule specifies that when response.encodeURL is
+            called (if
+            you are using JSTL c:url)
+            the url /rewrite-status will be
+            rewritten to /test/status/.
+            The above rule and this outbound-rule
+            means that end users should never
+            see the
+            url /rewrite-status only
+            /test/status/ both in thier location bar and in
+            hyperlinks
+            in your
+            pages.
+        </note>
+        <from>/rewrite-status</from>
+        <to>/index</to>
+    </outbound-rule>
+</urlrewrite>

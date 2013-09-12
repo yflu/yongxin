@@ -1,0 +1,2 @@
+var xx=31.31362;var yy=120.6704;
+$("#google_map").gmap3({action:"init",options:{center:[xx, yy],address:"Manhattan, NY 10002 30 ft N",zoom:16}},{action:"addMarkers",markers:[{lat:xx,lng:yy,data:"Manhattan, NY 10002 30 ft N"}],marker:{options:{draggable:false,icon:new google.maps.MarkerImage("../images/icons/Flag2LeftRed.png",new google.maps.Size(64,64))},events:{click:function(a,b,c){alert(c)}}}});
