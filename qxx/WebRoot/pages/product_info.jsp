@@ -39,13 +39,14 @@
 <!--============================================================== BEGIN content [ .smk_content ] -->
 <div class="clear"></div>
 <div class="page_top_details clearfix">
-    <div class="page_title container_12 clearfix">
-        <div class="grid_8 clearfix">
+    <div class="page_title container_12">
+        <div class="grid_6">
             <h1>Product Info</h1>
         </div>
-        <div class="grid_4 clearfix">
+        <div class="grid_6">
             <form method="post" id="searchform" onsubmit="setParam();"/>
-            <input type="text" class="field" name="keyword" id="keyword" placeholder="Search"/>
+            <input type="text" class="field" name="keyword" id="keyword" placeholder="Search"
+                   value="${keyword}"/>
             <input type="submit" class="submit" name="submit" id="searchsubmit" value=""/>
             </form>
         </div>
@@ -85,12 +86,9 @@
                 <c:forEach items="${product.medias}" var="media" end="10">
                     <li>
                         <img src="<%=SysConstant.IMAGE_URL%>${media.imgid}_610" alt="${media.name}"
-                             title="${media.name}"/>
+                             title="${media.name}" width="100%"/>
                     </li>
                 </c:forEach>
-                    <%--<li>
-                        <img src="<%=request.getContextPath()%>/images/assets/610x250.jpg"/>
-                    </li>--%>
             </ul>
         </div>
     </c:otherwise>
@@ -99,22 +97,22 @@
     <br/>
     <div class="grid_4 alpha">
         <ul class="d_list l_star">
-            <li>material:<c:out value="${product.material}"/></li>
-            <li>useage:<c:out value="${product.useage}"/></li>
-            <li>usesex:<c:out value="${product.sex}"/></li>
-            <li>size:<c:out value="${product.size}"/></li>
-            <li>color:<c:out value="${product.color}"/></li>
-            <li>application:<c:out value="${product.application}"/></li>
+            <li><span class="product_field">material</span>:<c:choose><c:when test="${product.material==null||product.material==''}">×</c:when><c:otherwise><c:out value="${product.material}"/></c:otherwise></c:choose></li>
+            <li><span class="product_field">useage</span>:<c:choose><c:when test="${product.useage==null||product.useage==''}">×</c:when><c:otherwise><c:out value="${product.useage}"/></c:otherwise></c:choose></li>
+            <li><span class="product_field">usesex</span>:<c:choose><c:when test="${product.sex==null||product.sex==''}">×</c:when><c:otherwise><c:out value="${product.sex}"/></c:otherwise></c:choose></li>
+            <li><span class="product_field">size</span>:<c:choose><c:when test="${product.size==null||product.size==''}">×</c:when><c:otherwise><c:out value="${product.size}"/></c:otherwise></c:choose></li>
+            <li><span class="product_field">color</span>:<c:choose><c:when test="${product.color==null||product.color==''}">×</c:when><c:otherwise><c:out value="${product.color}"/></c:otherwise></c:choose></li>
+            <li><span class="product_field">application</span>:<c:choose><c:when test="${product.application==null||product.application==''}">×</c:when><c:otherwise><c:out value="${product.application}"/></c:otherwise></c:choose></li>
         </ul>
     </div>
     <div class="grid_4 omega">
         <ul class="d_list l_tick">
-            <li>brand:<c:out value="${product.brand}"/></li>
-            <li>model:<c:out value="${product.model_num}"/></li>
-            <li>style:<c:out value="${product.pro_style}"/></li>
-            <li>pattern:<c:out value="${product.pattern}"/></li>
-            <li>moq:<c:out value="${product.moq}"/></li>
-            <li>unit:<c:out value="${product.unit}"/></li>
+            <li><span class="product_field">brand</span>:<c:choose><c:when test="${product.brand==null||product.brand==''}">Everxin</c:when><c:otherwise><c:out value="${product.brand}"/></c:otherwise></c:choose></li>
+            <li><span class="product_field">model</span>:<c:choose><c:when test="${product.model_num==null||product.model_num==''}">×</c:when><c:otherwise><c:out value="${product.model_num}"/></c:otherwise></c:choose></li>
+            <li><span class="product_field">style</span>:<c:choose><c:when test="${product.pro_style==null||product.pro_style==''}">×</c:when><c:otherwise><c:out value="${product.pro_style}"/></c:otherwise></c:choose></li>
+            <li><span class="product_field">pattern</span>:<c:choose><c:when test="${product.pattern==null||product.pattern==''}">×</c:when><c:otherwise><c:out value="${product.pattern}"/></c:otherwise></c:choose></li>
+            <li><span class="product_field">moq</span>:<c:choose><c:when test="${product.moq==null||product.moq==''}">×</c:when><c:otherwise><c:out value="${product.moq}"/></c:otherwise></c:choose></li>
+            <li><span class="product_field">unit</span>:<c:choose><c:when test="${product.unit==null||product.unit==''}">×</c:when><c:otherwise><c:out value="${product.unit}"/></c:otherwise></c:choose></li>
         </ul>
     </div>
 

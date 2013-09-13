@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/config.css"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/themes/skin.css"/>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/css/messenger.css"/>
-<link rel="stylesheet" href="<%=request.getContextPath()%>/css/messenger-theme-future.css"/>-
+<link rel="stylesheet" href="<%=request.getContextPath()%>/css/messenger-theme-future.css"/>
 <!--============================================= BEGIN SCRIPTS ==-->
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/jquery.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath()%>/js/messenger.min.js"></script>

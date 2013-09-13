@@ -51,8 +51,8 @@
                 <c:forEach items="${hotList}" var="item">
                     <li>
                         <a href="<%=request.getContextPath()%>/product/info/${item.id}"><img
-                                src="<%=SysConstant.IMAGE_URL%>${item.logo}_54x54" alt="${item.name}"
-                                title="${item.name}"/></a>
+                                src="<%=SysConstant.IMAGE_URL%>${item.logo}_100x100" alt="${item.name}"
+                                title="${item.name}" width="54" height="54"/></a>
                         <a href="<%=request.getContextPath()%>/product/info/${item.id}"
                            title="${item.name}">${item.name}</a>
 
@@ -84,8 +84,8 @@
                 <c:forEach items="${recList}" var="item">
                     <li>
                         <a href="<%=request.getContextPath()%>/product/info/${item.id}"><img
-                                src="<%=SysConstant.IMAGE_URL%>${item.logo}_54x54" alt="${item.name}"
-                                title="${item.name}"/></a>
+                                src="<%=SysConstant.IMAGE_URL%>${item.logo}_100x100" alt="${item.name}"
+                                title="${item.name}" width="54" height="54"/></a>
                         <a href="<%=request.getContextPath()%>/product/info/${item.id}"
                            title="${item.name}">${item.name}</a>
 
