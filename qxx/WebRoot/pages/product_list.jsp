@@ -84,7 +84,7 @@
 
                                     <div class="clear"></div>
                                     <div class="pf_item_description_masonry clearfix">
-                                        <h2><a href="<%=request.getContextPath()%>/product/info/1"><c:out
+                                        <h2><a href="<%=request.getContextPath()%>/product/info/${product.id}"><c:out
                                                 value="${product.name}"/></a>
                                         </h2>
 
