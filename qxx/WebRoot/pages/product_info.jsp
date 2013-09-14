@@ -64,11 +64,11 @@
         <h1><a href="<%=request.getContextPath()%>/product/info/${product.id}">${product.name}</a></h1>
 
         <div class="blog_post_meta">
-            <span>Posted by: <a href="#">joy</a></span>
+            <span>Posted by: <a href="javascript:void(0);">joy</a></span>
             <fmt:parseDate value="${product.updatetime}" var="proDate" pattern="yyyy-MM-dd HH:mm:ss"/>
         <span>Date: <span class="blogpost_date"><fmt:formatDate value="${proDate}" type="both"
                                                                 pattern="yyyy-MM-dd"/></span></span>
-            <span>Comments: <a href="#">${fn:length(commentList)} comments</a></span>
+            <span>Comments: <a href="javascript:void(0);">${fn:length(commentList)} comments</a></span>
         </div>
     </div>
 

@@ -83,13 +83,26 @@
                                     </a>
 
                                     <div class="clear"></div>
-                                    <div class="pf_item_description_masonry clearfix">
-                                        <h2><a href="<%=request.getContextPath()%>/product/info/${product.id}"><c:out
-                                                value="${product.name}"/></a>
+                                    <div class="pf_item_description_masonry clearfix" style="height:95px;word-break:break-all;" >
+                                        <h2><a href="<%=request.getContextPath()%>/product/info/${product.id}" title="${product.name}">
+                                            <c:choose>
+                                                <c:when test="${fn:length(product.name)>18}">
+                                                    <c:out value="${fn:substring(product.name,0,17)}"/>...
+                                                </c:when>
+                                                <c:otherwise>
+                                                    <c:out value="${product.name}"/>
+                                                </c:otherwise>
+                                            </c:choose></a>
                                         </h2>
-
-                                        <p><c:out value="${product.intro}"/></p>
-
+                                        <p style="height: 35px;">
+                                            <c:choose>
+                                            <c:when test="${fn:length(product.intro)>46}">
+                                                <c:out value="${fn:substring(product.intro,0,45)}"/>...
+                                                </c:when>
+                                                <c:otherwise>
+                                                <c:out value="${product.intro}"/>
+                                            </c:otherwise>
+                                            </c:choose>
                                         <div class="pf_masonry_meta">Posted by <a href="javascript:void(0);">JOY</a>
                                         </div>
                                     </div>

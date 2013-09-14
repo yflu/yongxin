@@ -8,6 +8,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -162,11 +163,29 @@
             </span>
             </a>
 
-            <div class="hp_item_meta">
-                <h2><a href="<%=request.getContextPath()%>/product/info/${hot.id}">${hot.name} </a></h2>
-                <span class="hb_meta">Posted by <a href="#">JOY</a></span>
+            <div class="hp_item_meta" style="height:80px">
+                <h2><a href="<%=request.getContextPath()%>/product/info/${hot.id}" title="${hot.name}">
+                    <c:choose>
+                        <c:when test="${fn:length(hot.name)>14}">
+                            <c:out value="${fn:substring(hot.name,0,13)}"/>...
+                        </c:when>
+                        <c:otherwise>
+                            <c:out value="${hot.name}"/>
+                        </c:otherwise>
+                    </c:choose>
+                </a></h2>
 
-                <p>${hot.intro} </p>
+                <p style="height: 35px;">
+                    <c:choose>
+                        <c:when test="${fn:length(hot.intro)>36}">
+                            <c:out value="${fn:substring(hot.intro,0,35)}"/>...
+                        </c:when>
+                        <c:otherwise>
+                            <c:out value="${hot.intro}"/>
+                        </c:otherwise>
+                    </c:choose>
+                </p>
+                <span class="hb_meta">Posted by <a href="javascript:void(0);">JOY</a></span>
             </div>
             <div class="clear"></div>
         </div>
@@ -207,11 +226,27 @@
             </span>
             </a>
 
-            <div class="hp_item_meta">
-                <h2><a href="<%=request.getContextPath()%>/product/info/${rec.id}">${rec.name} </a></h2>
-                <span class="hb_meta">Posted by <a href="#">JOY</a></span>
+            <div class="hp_item_meta" style="height:80px;word-break:break-all;">
+                <h2><a href="<%=request.getContextPath()%>/product/info/${rec.id}" title="${rec.name}">
+                    <c:choose>
+                        <c:when test="${fn:length(rec.name)>14}">
+                            <c:out value="${fn:substring(rec.name,0,13)}"/>...
+                        </c:when>
+                        <c:otherwise>
+                            <c:out value="${rec.name}"/>
+                        </c:otherwise>
+                    </c:choose></a></h2>
 
-                <p>${rec.intro} </p>
+                <p style="height: 40px;">
+                    <c:choose>
+                        <c:when test="${fn:length(rec.intro)>36}">
+                            <c:out value="${fn:substring(rec.intro,0,35)}"/>...
+                        </c:when>
+                        <c:otherwise>
+                            <c:out value="${rec.intro}"/>
+                        </c:otherwise>
+                    </c:choose> </p>
+                <span class="hb_meta">Posted by <a href="javascript:void(0);">JOY</a></span>
             </div>
             <div class="clear"></div>
         </div>
