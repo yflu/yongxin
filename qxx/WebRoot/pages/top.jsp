@@ -16,7 +16,8 @@
     <section class="container_12">
         <div class="grid_4 logo">
             <a href="<%=request.getContextPath()%>/pages/index.jsp"><img
-                    src="<%=request.getContextPath()%>/images/logo.png" alt="Forever Star Textile Co.,Ltd"/></a>
+                    src="<%=request.getContextPath()%>/images/logo.png" alt="Suzhou Everxin Textile Co.,Ltd"/>
+            </a>
         </div>
         <div class="grid_8 top_mod_right">
 

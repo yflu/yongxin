@@ -45,7 +45,7 @@
                             <div class="aboutus_img">
 							<span class="image_wrap">
 								<span class="img_wrap_in">
-									<img src="<%=request.getContextPath()%>/images/my/weijin.jpg" alt=""/>
+									<img src="<%=request.getContextPath()%>/images/my/book.gif" alt=""/>
 								</span>
 							</span><!-- End of  .image_wrap-->
                             </div>
