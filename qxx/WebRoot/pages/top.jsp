@@ -25,8 +25,8 @@
                 <ul id="nav" class="nav_simple">
                     <li><a href="<%=request.getContextPath()%>/index">Home</a></li>
                     <li><a href="<%=request.getContextPath()%>/product/list">Product</a></li>
-                    <li><a href="<%=request.getContextPath()%>/pages/team.jsp">The Team</a></li>
                     <li><a href="<%=request.getContextPath()%>/pages/contact.jsp">Contact</a></li>
+                    <li><a href="<%=request.getContextPath()%>/pages/faq.jsp">FAQ</a></li>
                     <li><a href="<%=request.getContextPath()%>/pages/about.jsp">About Us</a></li>
                 </ul>
                 <!-- End of #nav-->
