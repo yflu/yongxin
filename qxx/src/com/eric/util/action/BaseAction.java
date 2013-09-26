@@ -3,6 +3,8 @@ package com.eric.util.action;
 import com.google.gson.Gson;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,6 +23,13 @@ public class BaseAction {
         map.put("success", flag);
         map.put("msg", obj);
         return gson.toJson(map);
+    }
+
+
+    public void writeToClient(HttpServletResponse response, String result) throws IOException {
+        response.setContentType("text/html;charset=utf-8");
+        response.getWriter().write(result);
+        response.getWriter().flush();
     }
 
     /**

@@ -30,6 +30,12 @@
         <to>%{context-path}/checkcode.do?verify=$1</to>
     </rule>
 
+    <rule>
+        <note>getFile</note>
+        <from>^/uploads/((\d){4}/(\d){2}/(\d){2}/([a-z|0-9|\.]*))(_([0-9]*)?(x([0-9]*)?)?)?(/)?$</from>
+        <to>%{context-path}/image.do?path=$1&amp;width=$7&amp;height=$9</to>
+    </rule>
+
     <outbound-rule>
         <note>
             The outbound-rule specifies that when response.encodeURL is

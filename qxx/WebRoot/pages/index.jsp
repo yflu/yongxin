@@ -133,7 +133,7 @@
 
 
 <!-- ============= / hot[begin] -->
-<div class="home_blog">
+<div class="home_portfolio">
     <div class="grid_3 hp_item_grid">
         <h1 class="home_module_title">Hot products</h1>
 
@@ -156,7 +156,7 @@
                    <span class="img_wrap_in">
                         <div class="">
                             <img alt="${hot.name}" src="<%=SysConstant.IMAGE_URL%>${hot.logo}_300"
-                                 style="display: block; visibility: visible; opacity: 1;">
+                                 style="display: block; visibility: visible; opacity: 1;height: 210px;width: 210px;">
                         </div>
                     <span class="img_caption_zoom"></span>
                    </span>
@@ -166,8 +166,8 @@
             <div class="hp_item_meta" style="height:80px">
                 <h2><a href="<%=request.getContextPath()%>/product/info/${hot.id}" title="${hot.name}">
                     <c:choose>
-                        <c:when test="${fn:length(hot.name)>14}">
-                            <c:out value="${fn:substring(hot.name,0,13)}"/>...
+                        <c:when test="${fn:length(hot.name)>30}">
+                            <c:out value="${fn:substring(hot.name,0,30)}"/>...
                         </c:when>
                         <c:otherwise>
                             <c:out value="${hot.name}"/>
@@ -177,8 +177,8 @@
 
                 <p style="height: 35px;">
                     <c:choose>
-                        <c:when test="${fn:length(hot.intro)>36}">
-                            <c:out value="${fn:substring(hot.intro,0,35)}"/>...
+                        <c:when test="${fn:length(hot.intro)>80}">
+                            <c:out value="${fn:substring(hot.intro,0,80)}"/>...
                         </c:when>
                         <c:otherwise>
                             <c:out value="${hot.intro}"/>
@@ -219,7 +219,7 @@
                    <span class="img_wrap_in">
                         <div class="">
                             <img alt="${rec.name}" src="<%=SysConstant.IMAGE_URL%>${rec.logo}_300"
-                                 style="display: block; visibility: visible; opacity: 1;">
+                                 style="display: block; visibility: visible; opacity: 1;height: 210px;width: 210px;">
                         </div>
                     <span class="img_caption_zoom"></span>
                    </span>
@@ -229,8 +229,8 @@
             <div class="hp_item_meta" style="height:80px;word-break:break-all;">
                 <h2><a href="<%=request.getContextPath()%>/product/info/${rec.id}" title="${rec.name}">
                     <c:choose>
-                        <c:when test="${fn:length(rec.name)>14}">
-                            <c:out value="${fn:substring(rec.name,0,13)}"/>...
+                        <c:when test="${fn:length(rec.name)>30}">
+                            <c:out value="${fn:substring(rec.name,0,30)}"/>...
                         </c:when>
                         <c:otherwise>
                             <c:out value="${rec.name}"/>
@@ -239,8 +239,8 @@
 
                 <p style="height: 40px;">
                     <c:choose>
-                        <c:when test="${fn:length(rec.intro)>36}">
-                            <c:out value="${fn:substring(rec.intro,0,35)}"/>...
+                        <c:when test="${fn:length(rec.intro)>80}">
+                            <c:out value="${fn:substring(rec.intro,0,80)}"/>...
                         </c:when>
                         <c:otherwise>
                             <c:out value="${rec.intro}"/>

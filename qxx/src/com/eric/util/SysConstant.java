@@ -31,4 +31,11 @@ public class SysConstant {
     public static List<Product> REC_LIST = null;
     //产品分类
     public static List<Cate> CATE_LIST = null;
+
+    public static final String UPLOAD_PATH = ParsProperFile.getRyAppProp("com.raiyi.fileserver.uploadpath");
+
+    public static final String WATER_PICTURE = UPLOAD_PATH + "watermark.png";
+
+    public static final String WATER_CONTENT = "www.everxin.com";
 }
+

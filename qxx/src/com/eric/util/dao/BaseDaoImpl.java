@@ -272,6 +272,12 @@ public class BaseDaoImpl<T extends Serializable> implements IBaseDao<T> {
                 else if (param.getEq() == QueryParams.LIKE)
                     criteria.add(Restrictions.like(param.getField(),
                             param.getValue()));
+                else if (param.getEq() == QueryParams.LEFT_LIKE)
+                    criteria.add(Restrictions.like(param.getField(),
+                            param.getValue()));
+                else if (param.getEq() == QueryParams.RIGHT_LIKE)
+                    criteria.add(Restrictions.like(param.getField(),
+                            param.getValue()));
                 else if (param.getEq() == QueryParams.IN)
                     criteria.add(Restrictions.in(param.getField(),
                             (Collection<?>) param.getValue()));
@@ -434,6 +440,12 @@ public class BaseDaoImpl<T extends Serializable> implements IBaseDao<T> {
                 else if (param.getEq() == QueryParams.LIKE)
                     hql.append(" and ").append(param.getField())
                             .append(" like :").append(param.getField());
+                else if (param.getEq() == QueryParams.LEFT_LIKE)
+                    hql.append(" and ").append(param.getField())
+                            .append(" like :").append(param.getField());
+                else if (param.getEq() == QueryParams.RIGHT_LIKE)
+                    hql.append(" and ").append(param.getField())
+                            .append(" like :").append(param.getField());
                 else if (param.getEq() == QueryParams.IN)
                     hql.append(" and ").append(param.getField())
                             .append(" in(:").append(param.getField())
@@ -481,6 +493,12 @@ public class BaseDaoImpl<T extends Serializable> implements IBaseDao<T> {
                     criteria.add(Restrictions.le(param.getField(),
                             param.getValue()));
                 else if (param.getEq() == QueryParams.LIKE)
+                    criteria.add(Restrictions.like(param.getField(),
+                            param.getValue()));
+                else if (param.getEq() == QueryParams.LEFT_LIKE)
+                    criteria.add(Restrictions.like(param.getField(),
+                            param.getValue()));
+                else if (param.getEq() == QueryParams.RIGHT_LIKE)
                     criteria.add(Restrictions.like(param.getField(),
                             param.getValue()));
                 else if (param.getEq() == QueryParams.IN)

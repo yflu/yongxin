@@ -47,7 +47,7 @@ public class ProductAction extends BaseAction {
             if (keyword != null && !keyword.isEmpty())
                 params.add(new QueryParams("name", keyword, 3));
             if (cStr != null && !cStr.isEmpty())
-                params.add(new QueryParams("cateid", cStr, 3));
+                params.add(new QueryParams("cateid", cStr, 7));
             params.add(new QueryParams("status", 1, 0));
             String[][] order = {{"cateid", "asc"}, {"sortno", "asc"}, {"updatetime", "desc"}, {"id", "desc"}};
             long total = productService.countProduct(params);
